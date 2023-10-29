@@ -1,0 +1,83 @@
+import java.util.Scanner;
+
+
+class CurrencyConverter{
+    public static void main(String[] args) {
+        CurrencyConverter cur = new CurrencyConverter();
+        
+        System.out.println(" 1 Rupee");
+        System.out.println("2 Doller");
+        System.out.println(" 3 Euro");
+        Scanner sc = new Scanner(System.in);
+        int choise = sc.nextInt();
+        System.out.println("Enter The Amount");
+
+        double amount = sc.nextDouble();
+
+        switch (choise) {
+            case 1:
+                Rupee_to_other(amount);
+                break;
+            case 2:
+                Dollar_to_other(amount);
+                break;
+            case 3:
+                Euro_to_Other(amount);
+                break;
+
+        
+            default:
+                System.out.println("Invalid Choise");
+                break;
+        }
+    }
+     public static void Rupee_to_other(double amount) {
+       
+        System.out.println("=========================");
+        System.out.println(amount+ ":: Rupee ::"  + amount*0.013  +  " :   Dollar :");
+        System.out.println("============================");
+
+        
+        System.out.println("=============================");
+        System.out.println(amount+ "  :: Rupee ::  "  +  amount*0.012  +  "  :: Euro :: ");
+        System.out.println("===============================");
+
+       
+
+
+    }
+
+    public static void Euro_to_Other(double amount) {
+
+        System.out.println("========================================");
+
+        System.out.println(amount+ " Euro " + amount*88.74 + "Rupee");
+
+        System.out.println("===========================================");
+        
+        System.out.println();
+
+        System.out.println(" 1 Euro " +amount*1.07+ "   Dollar  ");
+        System.out.println();
+
+
+
+
+    }
+
+    public static void Dollar_to_other(double amount) {
+         System.out.println(amount+ "  1 Dollar  :: "  + amount*83.07
+        +  " :: Rupee ");
+
+        System.out.println("===========================");
+
+
+        System.out.println(amount+  " 1 Dollar :: " + amount*0.94 + "   ::Euro  ");
+
+
+        
+    }
+
+   
+    
+}
